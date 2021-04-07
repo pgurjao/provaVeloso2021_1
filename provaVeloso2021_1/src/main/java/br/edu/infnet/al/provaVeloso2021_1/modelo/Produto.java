@@ -58,10 +58,16 @@ public class Produto {
 	public String getOutrosDetalhesProduto() {
 		return outrosDetalhesProduto;
 	}
-	public Produto(int idProduto, int idTipoProduto, double preco) {
+//	public Produto(int idProduto, int idTipoProduto, double preco) {
+//		this.idProduto = idProduto;
+//		this.idTipoProduto = idTipoProduto;
+//		this.preco = preco;
+//	}
+	public Produto(int idProduto, String titulo, double preco) {
 		this.idProduto = idProduto;
-		this.idTipoProduto = idTipoProduto;
+		this.titulo = titulo;
 		this.preco = preco;
 	}
 	
+
 }

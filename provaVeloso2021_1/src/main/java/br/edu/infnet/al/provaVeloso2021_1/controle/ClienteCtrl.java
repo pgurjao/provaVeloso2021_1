@@ -6,21 +6,21 @@ import java.util.List;
 import br.edu.infnet.al.provaVeloso2021_1.modelo.Cliente;
 
 public class ClienteCtrl {
-	
+
 	private List<Cliente> clientes = new ArrayList<Cliente>();
-	
-public void cadastrarCliente (String nome, String email) {
-		
+
+	public void cadastrarCliente (String nome, String email) {
+
 		int idCliente = -1;
 		int indiceCliente = -1;
 		int idClienteMaximo = -1;
-		
+
 		if (clientes == null || clientes.size() == 0 ) {
 			Cliente cliente = new Cliente(1, nome, email);
 			clientes.add(cliente);
 		} else {
 			for (Cliente c : clientes) {
-				
+
 				if (c.getEmail() == email) {
 					idCliente = c.getIdCliente();
 					indiceCliente = clientes.indexOf(c);
