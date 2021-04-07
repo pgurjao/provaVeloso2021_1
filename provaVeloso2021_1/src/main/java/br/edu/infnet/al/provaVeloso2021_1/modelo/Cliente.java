@@ -57,4 +57,11 @@ public class Cliente {
 		return outrosDetalhes;
 	}
 
+	@Override
+	public String toString() {
+		return "Cliente [idCliente=" + idCliente + ", nome=" + nome + ", email=" + email + "]";
+	}
+
+	
+	
 }

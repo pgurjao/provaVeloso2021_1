@@ -28,7 +28,7 @@ public class ClienteCtrl {
 					clientes.remove(indiceCliente);
 					clientes.add(cliente);
 				} else {
-					idClienteMaximo = Math.max(idCliente, idClienteMaximo);
+					idClienteMaximo = Math.max(c.getIdCliente(), idClienteMaximo);
 				}
 			}
 			if (indiceCliente == -1) {

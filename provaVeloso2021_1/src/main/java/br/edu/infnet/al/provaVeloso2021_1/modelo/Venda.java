@@ -13,7 +13,7 @@ public class Venda {
 	private Date dataCriacao;
 	private int totalVenda;
 	private String outrosDetalhes;
-	private List<ItemVenda> itemVenda = new ArrayList<ItemVenda>();
+	private List<ItemVenda> itensVenda = new ArrayList<ItemVenda>();
 
 	public int getIdVenda() {
 		return idVenda;
@@ -41,12 +41,35 @@ public class Venda {
 	}
 	
 	public List<ItemVenda> getItemVenda() {
-		return itemVenda;
+		return itensVenda;
 	}
 
-	public void setItemVenda(Produto produto, int quantidade) {
-		ItemVenda itemVenda = new ItemVenda(idVenda, produto.getIdProduto(), quantidade);
-		this.itemVenda.add(itemVenda);
+	public void setItemVenda(int idVenda, int idProduto, int quantidade) {
+		
+		int indiceItemVenda = -1;
+//		int idItemVendaMaximo = -1;
+		ItemVenda itemVenda = new ItemVenda(this.idVenda, idProduto, quantidade);
+		
+		if (itensVenda == null || itensVenda.size() == 0 ) {
+			itensVenda.add(itemVenda);
+		} else {
+			for (ItemVenda i : itensVenda) {
+				
+				if (i.getIdProduto() == idProduto ) {
+//					idVenda = i.getIdVenda();
+					indiceItemVenda = itensVenda.indexOf(i);
+//					Venda venda = new Venda(idVenda, idCliente);
+					itensVenda.remove(indiceItemVenda);
+					itensVenda.add(itemVenda);
+				} // else {
+//					idItemVendaMaximo = Math.max(i.getIdVenda(), idItemVendaMaximo);
+//				}
+			}
+			if (indiceItemVenda == -1) {
+//				Venda venda = new Venda (idItemVendaMaximo+1, cliente.getIdCliente() );
+				itensVenda.add(itemVenda);
+			}
+		}
 	}
 
 	public Venda(int idVenda, int idCliente) {
@@ -56,4 +79,12 @@ public class Venda {
 		this.dataCriacao = dataInicial;
 	}
 
+	@Override
+	public String toString() {
+		return "Venda [idVenda=" + idVenda + ", idCliente=" + idCliente + ", dataCriacao=" + getDataCriacao()
+				+ ", itemVenda=" + itensVenda + "]";
+	}
+
+	
+	
 }

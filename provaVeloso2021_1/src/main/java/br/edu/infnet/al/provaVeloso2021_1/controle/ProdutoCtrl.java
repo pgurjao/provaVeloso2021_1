@@ -3,7 +3,6 @@ package br.edu.infnet.al.provaVeloso2021_1.controle;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.edu.infnet.al.provaVeloso2021_1.modelo.Cliente;
 import br.edu.infnet.al.provaVeloso2021_1.modelo.Produto;
 
 public class ProdutoCtrl {
@@ -29,7 +28,7 @@ public class ProdutoCtrl {
 					produtos.remove(indiceProduto);
 					produtos.add(produto);
 				} else {
-					idProdutoMaximo = Math.max(idProduto, idProdutoMaximo);
+					idProdutoMaximo = Math.max(p.getIdProduto(), idProdutoMaximo);
 				}
 			}
 			if (indiceProduto == -1) {

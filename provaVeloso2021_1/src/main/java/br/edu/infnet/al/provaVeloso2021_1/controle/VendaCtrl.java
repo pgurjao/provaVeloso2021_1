@@ -1,7 +1,6 @@
 package br.edu.infnet.al.provaVeloso2021_1.controle;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import br.edu.infnet.al.provaVeloso2021_1.modelo.Cliente;
@@ -31,7 +30,7 @@ public class VendaCtrl {
 					vendas.remove(indiceVenda);
 					vendas.add(venda);
 				} else {
-					idVendaMaximo = Math.max(idVenda, idVendaMaximo);
+					idVendaMaximo = Math.max(v.getIdVenda(), idVendaMaximo);
 				}
 			}
 			if (indiceVenda == -1) {
@@ -44,7 +43,7 @@ public class VendaCtrl {
 	public void exibirVendas () {
 
 		for (Venda v : vendas) {
-			System.out.println(v);
+			System.out.println(v.toString() );
 		}
 	}
 	
