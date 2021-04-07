@@ -16,13 +16,28 @@ public class Cliente {
 
 	private String outrosDetalhes;
 
-	public Cliente(int customer_id, String first_name, String last_name, String customer_phone, String customer_email) {
-		this.idCliente = customer_id;
-		this.nome = first_name;
-		this.sobrenome = last_name;
-		this.telefone = customer_phone;
-		this.email = customer_email;
+	public Cliente(int idCliente, String nome, String sobrenome, String telefone, String email) {
+		this.idCliente = idCliente;
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.telefone = telefone;
+		this.email = email;
 	}
+
+	public Cliente(int idCliente, String nome, String email) {
+		this.idCliente = idCliente;
+		this.nome = nome;
+		this.email = email;
+	}
+
+
+
+	public Cliente(String nome, String email) {
+		this.nome = nome;
+		this.email = email;
+	}
+
+
 
 	public int getIdCliente() {
 		return idCliente;

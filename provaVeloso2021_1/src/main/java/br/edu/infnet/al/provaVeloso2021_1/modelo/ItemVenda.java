@@ -3,10 +3,9 @@ package br.edu.infnet.al.provaVeloso2021_1.modelo;
 public class ItemVenda {
 	
 	private int idVenda;
-	
 	private int idProduto;
-	
 	private int quantidade;
+	private String observacoes;
 	
 	public int getIdVenda() {
 		return idVenda;
@@ -24,14 +23,9 @@ public class ItemVenda {
 		return observacoes;
 	}
 
-	private String observacoes;
-
 	public ItemVenda(int idVenda, int idProduto, int quantidade) {
 		this.idVenda = idVenda;
 		this.idProduto = idProduto;
 		this.quantidade = quantidade;
 	}
-
-	
-	
 }

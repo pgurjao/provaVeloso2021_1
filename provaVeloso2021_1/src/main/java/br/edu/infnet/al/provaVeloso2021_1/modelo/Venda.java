@@ -8,17 +8,11 @@ import java.util.List;
 public class Venda {
 	
 	private int idVenda;
-	
 	private int idCliente;
-	
 	private int codigoStatus;
-	
 	private Date dataCriacao;
-	
 	private int totalVenda;
-	
 	private String outrosDetalhes;
-	
 	private List<ItemVenda> itemVenda = new ArrayList<ItemVenda>();
 
 	public int getIdVenda() {
@@ -46,13 +40,14 @@ public class Venda {
 		return outrosDetalhes;
 	}
 	
-//	public List<Produto> getProdutos() {
-//		return produtos;
-//	}
-//
-//	public void setProdutos(Produto produto) {
-//		produtos.add(produto);
-//	}
+	public List<ItemVenda> getItemVenda() {
+		return itemVenda;
+	}
+
+	public void setItemVenda(Produto produto, int quantidade) {
+		ItemVenda itemVenda = new ItemVenda(idVenda, produto.getIdProduto(), quantidade);
+		this.itemVenda.add(itemVenda);
+	}
 
 	public Venda(int idVenda, int idCliente) {
 		this.idVenda = idVenda;
@@ -60,17 +55,5 @@ public class Venda {
 		Date dataInicial = new Date(System.currentTimeMillis() );
 		this.dataCriacao = dataInicial;
 	}
-
-//	private List<Venda> getVendas() {
-//		return vendas;
-//	}
-
-//	private void setVendas(Venda vendas) {
-//		this.vendas = new ArrayList<Venda>();
-//		this.vendas.add(this);
-//		
-//	}
-	
-	
 
 }
