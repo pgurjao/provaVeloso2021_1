@@ -33,6 +33,7 @@ public class ClienteCtrl {
 			}
 			if (indiceCliente == -1) {
 				Cliente cliente = new Cliente (idClienteMaximo+1, nome, email );
+				clientes.add(cliente);
 			}
 		}
 	}

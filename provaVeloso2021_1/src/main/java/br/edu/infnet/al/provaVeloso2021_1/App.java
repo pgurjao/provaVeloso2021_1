@@ -12,10 +12,11 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Testando adicionar produto" );
+        System.out.println( "MAIN ---- \n Testando adicionar produto" );
         ProdutoCtrl pc = new ProdutoCtrl();
         
         pc.cadastrarProduto ("Titulo 1", 4.05);
+        pc.exibirProdutos();
         
         
         

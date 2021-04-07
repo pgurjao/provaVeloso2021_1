@@ -34,6 +34,7 @@ public class ProdutoCtrl {
 			}
 			if (indiceProduto == -1) {
 				Produto produto = new Produto (idProdutoMaximo+1, titulo, preco );
+				produtos.add(produto);
 			}
 		}
 	}
@@ -41,7 +42,7 @@ public class ProdutoCtrl {
 	public void exibirProdutos () {
 
 		for (Produto p : produtos) {
-			System.out.println(p);
+			System.out.println(p.toString() );
 		}
 	}
 

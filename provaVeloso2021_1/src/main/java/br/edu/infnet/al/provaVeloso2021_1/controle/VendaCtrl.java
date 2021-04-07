@@ -36,6 +36,7 @@ public class VendaCtrl {
 			}
 			if (indiceVenda == -1) {
 				Venda venda = new Venda (idVendaMaximo+1, cliente.getIdCliente() );
+				vendas.add(venda);
 			}
 		}
 	}

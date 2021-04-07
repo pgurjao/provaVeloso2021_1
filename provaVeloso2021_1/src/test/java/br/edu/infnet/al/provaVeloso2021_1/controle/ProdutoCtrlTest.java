@@ -11,16 +11,22 @@ public class ProdutoCtrlTest {
     public void cadastrarProdutoTest() {
 	
 		//monta cenários
-		System.out.println( "Testando adicionar produto" );
+		System.out.println( "TESTE - Testando adicionar produto" );
 		ProdutoCtrl pc = new ProdutoCtrl();
 
 		//execução da logica
-		pc.cadastrarProduto ("Titulo 1", 4.05);
+		pc.cadastrarProduto ("Titulo 1", 1.05);
+		pc.cadastrarProduto ("Bla  2", 2.05);
+		pc.cadastrarProduto ("Cla 3", 3.05);
+		pc.cadastrarProduto ("Dla 4", 4.05);
+		pc.cadastrarProduto ("Ela 5", 5.05);
+		pc.cadastrarProduto ("Fla 6", 6.05);
+		pc.cadastrarProduto ("Gla 7", 7.05);
 
 		
 	
 		//validação do teste
-		System.out.println("exibindo produtos");
+		System.out.println("TESTE - exibindo produtos");
 		pc.exibirProdutos();
 //		assertEquals("Titulo 1", pc.);
 		
