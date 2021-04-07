@@ -27,6 +27,7 @@ public class ClienteCtrl {
 					Cliente cliente = new Cliente(idCliente, nome, email );
 					clientes.remove(indiceCliente);
 					clientes.add(cliente);
+					break;
 				} else {
 					idClienteMaximo = Math.max(c.getIdCliente(), idClienteMaximo);
 				}
@@ -45,4 +46,14 @@ public class ClienteCtrl {
 		}
 	}
 
+	public Cliente buscarClientePorId (int idCliente) {
+
+		for (Cliente c : clientes) {
+			if (c.getIdCliente() == idCliente) {
+				return c;
+			}
+		}
+		return null;
+	}
+	
 }

@@ -27,6 +27,7 @@ public class ProdutoCtrl {
 					Produto produto = new Produto(idProduto, titulo, preco );
 					produtos.remove(indiceProduto);
 					produtos.add(produto);
+					break;
 				} else {
 					idProdutoMaximo = Math.max(p.getIdProduto(), idProdutoMaximo);
 				}
@@ -43,6 +44,16 @@ public class ProdutoCtrl {
 		for (Produto p : produtos) {
 			System.out.println(p.toString() );
 		}
+	}
+	
+	public Produto buscarProdutoPorId (int idProduto) {
+
+		for (Produto p : produtos) {
+			if (p.getIdProduto() == idProduto) {
+				return p;
+			}
+		}
+		return null;
 	}
 
 }
