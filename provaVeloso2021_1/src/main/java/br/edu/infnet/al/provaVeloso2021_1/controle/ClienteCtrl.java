@@ -36,5 +36,12 @@ public class ClienteCtrl {
 			}
 		}
 	}
+	
+	public void exibirClientes () {
+		
+		for (Cliente c : clientes) {
+			System.out.println(c);
+		}
+	}
 
 }

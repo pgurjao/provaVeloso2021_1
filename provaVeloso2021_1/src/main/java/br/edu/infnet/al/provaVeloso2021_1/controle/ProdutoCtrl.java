@@ -38,4 +38,11 @@ public class ProdutoCtrl {
 		}
 	}
 
+	public void exibirProdutos () {
+
+		for (Produto p : produtos) {
+			System.out.println(p);
+		}
+	}
+
 }

@@ -39,4 +39,12 @@ public class VendaCtrl {
 			}
 		}
 	}
+	
+	public void exibirVendas () {
+
+		for (Venda v : vendas) {
+			System.out.println(v);
+		}
+	}
+	
 }

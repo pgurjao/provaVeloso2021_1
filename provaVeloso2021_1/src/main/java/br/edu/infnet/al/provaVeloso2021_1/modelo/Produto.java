@@ -16,6 +16,7 @@ public class Produto {
 	private String sabor;
 	private String ingredientes;
 	private String outrosDetalhesProduto;
+	
 	public int getIdProduto() {
 		return idProduto;
 	}
@@ -68,6 +69,4 @@ public class Produto {
 		this.titulo = titulo;
 		this.preco = preco;
 	}
-	
-
 }
