@@ -15,7 +15,6 @@ public class VendaCtrl {
 		
 		int idVenda = 0;
 		int idCliente = cliente.getIdCliente();
-		int idClienteNaVenda;
 		int indiceVenda = -1;
 		int idVendaMaximo = -1;
 		
@@ -39,8 +38,5 @@ public class VendaCtrl {
 				Venda venda = new Venda (idVendaMaximo+1, cliente.getIdCliente() );
 			}
 		}
-		
-		
 	}
-	
 }
